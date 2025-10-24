@@ -2,16 +2,26 @@
 librosa
 
 # for using Silero VAD with WhisperStreaming, torchaudio is needed
-torchaudio
+# torchaudio
 
 # from SimulWhisper
-torch
+# torch
+
+# pip install torch torchaudio --index-url https://download.python.org/whl/cu128
 
 # from Whisper
 tqdm
 tiktoken
 
 # both Whisper and SimulWhisper. SimulWhisper requires <3
-triton>=2.0.0,<3;platform_machine=="x86_64" and sys_platform=="linux" or sys_platform=="linux2"
+# triton>=2.0.0,<3;platform_machine=="x86_64" and sys_platform=="linux" or sys_platform=="linux2"
+triton-windows<3.6
 
+more-itertools
 
+# CTranslate2 converted model
+# sudo yum install git-lfs
+# git clone https://[name]:[accesstoken]@huggingface.co/utter-project/EuroLLM-9B-Instruct
+ctranslate2
+transformers[torch]
+transformers[sentencepiece]
